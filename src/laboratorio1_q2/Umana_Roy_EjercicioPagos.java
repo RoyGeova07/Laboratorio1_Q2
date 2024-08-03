@@ -85,6 +85,5 @@ public class Umana_Roy_EjercicioPagos {
         System.out.println("Horas extras: " + horasExtras);
         System.out.println("Salario Neto: " + salarioNeto + " $");
         
-        scanner.close();
     }
 }
