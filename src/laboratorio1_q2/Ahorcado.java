@@ -18,7 +18,7 @@ public class Ahorcado {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        // Configuramos el delimitador de entrada para que sea una nueva línea  
+        // Configuramos el delimitador de entrada para que sea una nueva linea  
         teclado.useDelimiter("\n");
 
         // Array de palabras predeterminadas para el juego
