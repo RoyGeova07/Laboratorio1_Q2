@@ -29,16 +29,16 @@ public class Ahorcado {
         // Objeto Random para generar las palabras aleatorias
         Random lea = new Random();
 
-        // Array para almacenar la palabra que el usuario está adivinando
+        // Array para almacenar la palabra que el usuario esta adivinando
         char[] palabraAdivinada;
         // Cadena para almacenar la palabra seleccionada aleatoriamente
         String palabra;
-        // Número de oportunidades restantes para adivinar la palabra
+        // numero de oportunidades restantes para adivinar la palabra
         int oportunidades;
-        // Opción elegida por el usuario en el menu
+        // Opcion elegida por el usuario en el menu
         int opcion;
 
-        // Mensaje de bienvenida y explicación del juego
+        // Mensaje de bienvenida y explicacion del juego
         System.out.println("Hola!!, bienvenido al Menu de juego Ahorcado, donde te ponen una palabra\ny la tienes que adivinar ingresando caracteres, en la opcion 2 puedes elegir cambiar las 10 palabras\no sea que las palabras que ya estan por predeterminacion las puedes cambiar y podes jugar adivinando\nesas palabras con tu amigos!! y en la opcion 3 puedes salir, ten un buen dia!!!!");
         System.out.println("\n");
 
@@ -55,7 +55,7 @@ public class Ahorcado {
             // Limpiamos el buffer de la entrada
             teclado.nextLine();
 
-            // Controlamos la opción elegida por el usuario
+            // Controlamos la opcion elegida por el usuario
             if (opcion == 1) {
                 // El usuario elige jugar.
                 // Seleccionamos una palabra aleatoria del array de palabras.
@@ -66,7 +66,7 @@ public class Ahorcado {
                 for (int indice = 0; indice < palabraAdivinada.length; indice++) {
                     palabraAdivinada[indice] = '_';
                 }
-                // Inicializamos el número de oportunidades.
+                // Inicializamos el numero de oportunidades.
                 oportunidades = MaximaOportunidad;
 
                 // Array de booleanos para registrar los caracteres que ya se han intentado adivinar
@@ -84,18 +84,18 @@ public class Ahorcado {
                     System.out.print("Ingresa un caracter: ");
                     char letra = teclado.nextLine().toUpperCase().charAt(0);
 
-                    // Validamos si el carácter ingresado es una letra válida.
+                    // Validamos si el caracter ingresado es una letra válida.
                     if (letra < 'A' || letra > 'Z') {
                         System.out.println("Caracter no valido. Ingresa una letra de la A a la Z por favor!!!.");
                         continue; // Continuamos con la siguiente iteración del bucle
                     }
 
-                    // Validamos si el carácter ya ha sido intentado antes.
+                    // Validamos si el caracter ya ha sido intentado antes.
                     if (caracteresIntentados[letra - 'A']) {
                         System.out.println("Ya has intentado adivinar este caracter antes!");
                         continue;
                     }
-                    caracteresIntentados[letra - 'A'] = true; // Marcamos el carácter como intentado
+                    caracteresIntentados[letra - 'A'] = true; // Marcamos el caracter como intentado
 
                     // Bandera para indicar si el carácter ingresado coincide con alguna letra de la palabra
                     boolean acierto = false;
@@ -107,7 +107,7 @@ public class Ahorcado {
                         }
                     }
 
-                    // Mostramos si se acertó un caracter o no
+                    // Mostramos si se acerto un caracter o no
                     if (acierto) {
                         System.out.println("Le pegaste a un caracter!");
                     } else {
