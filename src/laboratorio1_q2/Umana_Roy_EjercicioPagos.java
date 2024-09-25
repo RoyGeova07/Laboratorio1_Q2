@@ -19,8 +19,7 @@ public class Umana_Roy_EjercicioPagos {
         Scanner scanner = new Scanner(System.in);
         scanner.useDelimiter("\n");
         
-        // Solicitar información del empleado
-        System.out.println("Ingrese el código del empleado:");
+        System.out.println("Ingrese el codigo del empleado:");
         String codigo = scanner.next();
         
         System.out.println("Ingrese el nombre del empleado:");
@@ -35,16 +34,14 @@ public class Umana_Roy_EjercicioPagos {
         System.out.println("Ingrese la cantidad de horas extras trabajadas:");
         int horasExtras = scanner.nextInt();
         
-        System.out.println("Ingrese la categoría del empleado (1, 2, 3, 4):");
+        System.out.println("Ingrese la categoria del empleado (1, 2, 3, 4):");
         int categoria = scanner.nextInt();
-        
-        // Validar y ajustar las horas trabajadas y extras según las reglas
+    
         int horasNormales = horasTrabajadas;
         if (horasNormales > 40) {
             horasNormales = 40;
         }
-        
-        // Validar y ajustar las horas extras según las reglas
+
         int horasExtrasPagables = 0;
         if (horasExtras > 0) {
             if (horasExtras <= 15) {
@@ -68,7 +65,7 @@ public class Umana_Roy_EjercicioPagos {
         } else if (categoria == 4) {
             pagoExtra = 0; // Categoría 4 no recibe pago extra por horas extras
         } else {
-            System.out.println("Categoría no válida");
+            System.out.println("Categoría no valida");
             return;
         }
         
@@ -77,11 +74,11 @@ public class Umana_Roy_EjercicioPagos {
         
         // Imprimir la boleta de pago
         System.out.println("----------------Boleta de Pago---------------");
-        System.out.println("Código: " + codigo);
+        System.out.println("Codigo: " + codigo);
         System.out.println("Nombre Completo: " + nombre + " " + apellido);
         System.out.println("Salario Base: " + salarioBase + " $");
         System.out.println("Horas Trabajadas: " + horasTrabajadas);
-        System.out.println("Categoría: " + categoria);
+        System.out.println("Categoria: " + categoria);
         System.out.println("Horas extras: " + horasExtras);
         System.out.println("Salario Neto: " + salarioNeto + " $");
         
