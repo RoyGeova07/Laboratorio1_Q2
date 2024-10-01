@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  *
  * @author royum
- */xd
+ */
 public class Ahorcado {
 
     /**
