@@ -37,34 +37,48 @@ public class Umana_Roy_EjercicioPagos {
         System.out.println("Ingrese la categoria del empleado (1, 2, 3, 4):");
         int categoria = scanner.nextInt();
     
-        int horasNormales = horasTrabajadas;
-        if (horasNormales > 40) {
-            horasNormales = 40;
+        int horasNormales=horasTrabajadas;
+        if(horasNormales > 40){
+            
+            horasNormales=40;
+            
         }
 
-        int horasExtrasPagables = 0;
-        if (horasExtras > 0) {
-            if (horasExtras <= 15) {
+        int horasExtrasPagables=0;
+        if(horasExtras > 0){
+            if(horasExtras <= 15){
+                
                 horasExtrasPagables = horasExtras;
-            } else {
-                horasExtrasPagables = 15;
+                
+            }else{
+                
+                horasExtrasPagables=15;
+                
             }
         }
         
-        // Calcular salario base y pago extra
-        double salarioBase = horasNormales * 35.99;
-        double pagoExtra = 0;
+        //aqui se calculaa salario base y pago extra
+        double salarioBase=horasNormales*35.99;
+        double pagoExtra=0;
         
-        // Calcular pago extra según la categoría
-        if (categoria == 1) {
-            pagoExtra = horasExtrasPagables * 40;
-        } else if (categoria == 2) {
-            pagoExtra = horasExtrasPagables * 50;
-        } else if (categoria == 3) {
-            pagoExtra = horasExtrasPagables * 85;
-        } else if (categoria == 4) {
-            pagoExtra = 0; // Categoría 4 no recibe pago extra por horas extras
-        } else {
+        //aqui se calculaa el pago extra segun la categoria
+        if(categoria==1){
+            
+            pagoExtra=horasExtrasPagables*40;
+            
+        }else if(categoria==2){
+            
+            pagoExtra=horasExtrasPagables*50;
+            
+        }else if(categoria==3){
+            
+            pagoExtra=horasExtrasPagables*85;
+            
+        }else if(categoria==4){
+            
+            pagoExtra=0; // Categoria 4 no recibe pago extra por horas extras
+            
+        }else{
             System.out.println("Categoría no valida");
             return;
         }
